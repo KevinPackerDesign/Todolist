@@ -14,7 +14,15 @@ function newItem() {
 // Tried to get the the add button to be clicked on enter
   $("#button").keypress((e) => {
     if (e.which === 13) {
-      $("#button").newItem();
+      let li = $("<li></li>");
+  let inputValue = $("#input").val();
+  li.append(inputValue);
+
+   if (inputValue === "") {
+    alert("You must write something!");
+  } else {
+    $("#list").append(li);
+  }
     }
   });
 */
